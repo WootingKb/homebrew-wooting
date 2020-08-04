@@ -7,7 +7,7 @@ class WootingAnalogPlugin < Formula
   url "https://github.com/WootingKb/wooting-analog-plugin/releases/download/v0.4.0/wooting-analog-plugin-v0.4.0-x86_64-apple-darwin.tar.gz"
   sha256 "2e6e2fa43906f86b95e1c6d8d9feb84fbc746c09ac504e7ffec649ec9cbc821b"
   license "MPL-2.0"
-
+  depends_on "wooting-analog-sdk"
   # depends_on "cmake" => :build
 
   def install

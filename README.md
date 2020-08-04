@@ -1,4 +1,9 @@
-# WootingKb Wooting
+# Wooting Homebrew packages
+
+## Included packages
+
+- [`wooting-analog-sdk`](https://github.com/WootingKb/wooting-analog-sdk)
+- [`wooting-analog-plugin`](https://github.com/WootingKb/wooting-analog-plugin)
 
 ## How do I install these formulae?
 `brew install wootingkb/wooting/<formula>`

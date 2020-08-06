@@ -4,8 +4,8 @@
 class WootingAnalogSdk < Formula
   desc "Native support for Analog Keyboards #WootDev"
   homepage "https://github.com/WootingKb/wooting-analog-sdk"
-  url "https://github.com/WootingKb/wooting-analog-sdk/releases/download/v0.4.0/wooting-analog-sdk-v0.4.0-x86_64-apple-darwin.tar.gz"
-  sha256 "5074c2d1211b38b913d20038a4b96f81f56940a3e6939c2d528d6d5a204992e6"
+  url "https://github.com/WootingKb/wooting-analog-sdk/releases/download/v0.5.0/wooting-analog-sdk-v0.5.0-x86_64-apple-darwin.tar.gz"
+  sha256 "a0cd00e2687059e1cbd64b449f1ace893cfcd6e3a9e87a3ddb299463e87c5806"
   license "MPL-2.0"
   bottle :unneeded
   
@@ -24,6 +24,8 @@ class WootingAnalogSdk < Formula
     
     (share/"WootingAnalogPlugins").mkpath
     (share/"WootingAnalogPlugins/wooting-analog-test-plugin").mkpath
+    (share/"WootingAnalogPlugins/wooting-analog-plugin").mkpath
+    (share/"WootingAnalogPlugins/wooting-analog-plugin").install "wrapper/sdk/libwooting_analog_plugin.dylib"
     
     (share/"WootingAnalogPlugins/wooting-analog-test-plugin").install "wrapper/sdk/libwooting_analog_test_plugin.dylib"
   end

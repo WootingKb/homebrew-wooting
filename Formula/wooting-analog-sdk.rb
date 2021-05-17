@@ -5,16 +5,13 @@ class WootingAnalogSdk < Formula
   sha256 "3014ab8dd50c5ef20927d1de6f75289bfeaae450e2f617003b2a6b6d67dfc360"
   license "MPL-2.0"
   bottle :unneeded
-  
 
   def install
     lib.install "wrapper/sdk/libwooting_analog_sdk.dylib"
-    
     (share/"WootingAnalogPlugins").mkpath
     (share/"WootingAnalogPlugins/wooting-analog-test-plugin").mkpath
     (share/"WootingAnalogPlugins/wooting-analog-plugin").mkpath
     (share/"WootingAnalogPlugins/wooting-analog-plugin").install "wrapper/sdk/libwooting_analog_plugin.dylib"
-    
     (share/"WootingAnalogPlugins/wooting-analog-test-plugin").install "wrapper/sdk/libwooting_analog_test_plugin.dylib"
   end
 

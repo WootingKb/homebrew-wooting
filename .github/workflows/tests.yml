@@ -5,7 +5,10 @@ on:
   pull_request: []
 jobs:
   test-bot:
-    runs-on: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
     steps:
       - name: Update Homebrew
         run: brew update

@@ -8,11 +8,12 @@ class WootingAnalogSdk < Formula
 
   def install
     lib.install "wrapper/sdk/libwooting_analog_sdk.dylib"
-    (share/"WootingAnalogPlugins").mkpath
-    (share/"WootingAnalogPlugins/wooting-analog-test-plugin").mkpath
-    (share/"WootingAnalogPlugins/wooting-analog-plugin").mkpath
-    (share/"WootingAnalogPlugins/wooting-analog-plugin").install "wrapper/sdk/libwooting_analog_plugin.dylib"
-    (share/"WootingAnalogPlugins/wooting-analog-test-plugin").install "wrapper/sdk/libwooting_analog_test_plugin.dylib"
+    basepath = (share/"WootingAnalogPlugins")
+    basepath.mkpath
+    (basepath/"wooting-analog-test-plugin").mkpath
+    (basepath/"wooting-analog-plugin").mkpath
+    (basepath/"wooting-analog-plugin").install "wrapper/sdk/libwooting_analog_plugin.dylib"
+    (basepath/"wooting-analog-test-plugin").install "wrapper/sdk/libwooting_analog_test_plugin.dylib"
   end
 
   test do
